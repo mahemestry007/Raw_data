@@ -1,0 +1,21 @@
+CREATE TABLE Employees (
+    EmployeeID INT PRIMARY KEY,
+    FirstName VARCHAR(50),
+    LastName VARCHAR(50),
+    Email VARCHAR(100),
+    PhoneNumber VARCHAR(15),
+    HireDate DATE,
+    Salary DECIMAL(10, 2),
+    DepartmentID INT,
+    ManagerID INT
+);
+
+INSERT INTO Employees (EmployeeID, FirstName, LastName, Email, PhoneNumber, HireDate, Salary, DepartmentID, ManagerID)
+VALUES
+    (1, 'John', 'Doe', 'john.doe@example.com', '555-123-4567', '2022-01-15', 60000.00, 1, NULL),
+    (2, 'Jane', 'Smith', 'jane.smith@example.com', '555-987-6543', '2021-03-10', 75000.00, 2, 1),
+    (3, 'Bob', 'Johnson', 'bob.johnson@example.com', '555-222-3333', '2023-05-20', 55000.00, 1, NULL),
+    (4, 'Alice', 'Williams', 'alice.williams@example.com', '555-777-8888', '2022-09-08', 80000.00, 2, 1),
+    (5, 'Eva', 'Brown', 'eva.brown@example.com', '555-555-5555', '2022-07-01', 68000.00, 1, 3),
+    (6, 'Michael', 'Lee', 'michael.lee@example.com', '555-333-2222', '2022-11-12', 72000.00, 2, 4),
+    (7, 'Sophia', 'Clark', 'sophia.clark@example.com', '555-888-9999', '2023-02-28', 60000.00, 1, 3);
